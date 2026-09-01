@@ -1,0 +1,20 @@
+class Solution {
+public:
+    bool searchMatrix(vector<vector<int>>& mat, int target) {
+     int n=mat[0].size(), m=mat.size(); 
+     int r=0; 
+     int c=n-1; 
+     while(r<m && c>=0) {
+     if(target==mat[r][c]){
+        return true; 
+     }   
+     else if(target>mat[r][c]){ 
+        r++;
+     }
+     else {
+        c--;
+     }
+    } 
+      return false;
+    }
+};
